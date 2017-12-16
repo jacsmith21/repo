@@ -1,25 +1,25 @@
-package main
+package repo
 
 import "io/ioutil"
 
-func LoadBreastCancerWisconsinDataSet() []byte {
-  return loadBytes("breast-cancer-wisconsin.data")
+func LoadBreastCancerWisconsinDataSet() string {
+  return string(loadBytes("breast-cancer-wisconsin.data"))
 }
 
-func LoadCarEvaluationDataSet() []byte {
-  return loadBytes("car.data")
+func LoadCarEvaluationDataSet() string {
+  return string(loadBytes("car.data"))
 }
 
-func LoadEcoliDataSet() []byte {
-  return loadBytes("ecoli.data")
+func LoadEcoliDataSet() string {
+  return string(loadBytes("ecoli.data"))
 }
 
-func LoadLetterRecognitionDataSet() []byte {
-  return loadBytes("letter-recognition.data")
+func LoadLetterRecognitionDataSet() string {
+  return string(loadBytes("letter-recognition.data"))
 }
 
-func LoadMushroomDataSet() []byte {
-  return loadBytes("mushroom.data")
+func LoadMushroomDataSet() string {
+  return string(loadBytes("mushroom.data"))
 }
 
 func loadBytes(filename string) []byte {
