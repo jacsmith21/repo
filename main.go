@@ -1,32 +1,32 @@
 package repo
 
-import "io/ioutil"
+import "os"
 
-func LoadBreastCancerWisconsinDataSet() string {
-  return string(loadBytes("breast-cancer-wisconsin.data"))
+func LoadBreastCancerWisconsinDataSet() *os.File {
+  return open("breast-cancer-wisconsin.data")
 }
 
-func LoadCarEvaluationDataSet() string {
-  return string(loadBytes("car.data"))
+func LoadCarEvaluationDataSet() *os.File {
+  return open("car.data")
 }
 
-func LoadEcoliDataSet() string {
-  return string(loadBytes("ecoli.data"))
+func LoadEcoliDataSet() *os.File {
+  return open("ecoli.data")
 }
 
-func LoadLetterRecognitionDataSet() string {
-  return string(loadBytes("letter-recognition.data"))
+func LoadLetterRecognitionDataSet() *os.File {
+  return open("letter-recognition.data")
 }
 
-func LoadMushroomDataSet() string {
-  return string(loadBytes("mushroom.data"))
+func LoadMushroomDataSet() *os.File {
+  return open("mushroom.data")
 }
 
-func loadBytes(filename string) []byte {
-  bytes, err := ioutil.ReadFile(filename) // just pass the file name
+func open(filename string) *os.File {
+  file, err := os.Open(filename) // just pass the file name
   if err != nil {
       panic(err)
   }
 
-  return bytes
+  return file
 }
