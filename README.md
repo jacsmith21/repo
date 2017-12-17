@@ -9,13 +9,13 @@ $ go get github.com/jacsmith21/repo
 ```
 then load the data:
 ```
-file := repo.OpenBreastCancerWisconsinDataSet()
+bytes := repo.LoadBreastCancerWisconsinDataSet()
 ...
-file := repo.OpenCarEvaluationDataSet()
+bytes := repo.LoadCarEvaluationDataSet()
 ...
-file := repo.OpenEcoliDataSet()
+bytes := repo.LoadEcoliDataSet()
 ...
-file := repo.OpenLetterRecognitionDataSet()
+bytes := repo.LoadLetterRecognitionDataSet()
 ...
-file := repo.OpenMushroomDataSet()
+bytes := repo.LoadMushroomDataSet()
 ```
